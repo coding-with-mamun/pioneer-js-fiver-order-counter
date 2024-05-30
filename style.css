@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Arial, Helvetica;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.fiverr_wrapper {
+  width: 900px;
+
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+  .count_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .count_box {
+      width: 80px;
+      height: 100px;
+      box-shadow: rgb(50 50 93 / 21%) 0px 13px 29px -12px inset,
+        rgb(0 0 0 / 10%) 0px 11px 7px 0px inset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #c2c2c2;
+      border-radius: 4px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 5px;
+        height: 20px;
+        box-shadow: inset 6px 0px 0px rgb(255 255 255 / 0%),
+          inset -2px 0px 3px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+      }
+      &::before {
+        content: "";
+        width: 5px;
+        height: 20px;
+        box-shadow: inset 6px 0px 0px rgb(255 255 255 / 0%),
+          inset 2px 0px 3px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+      }
+
+      h4 {
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .divider {
+        top: 50%;
+        position: absolute;
+        width: calc(100% - 10px);
+        height: 3px;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        background-color: #c2c2c2;
+      }
+    }
+  }
+
+  .count_parent {
+    position: relative;
+
+    .count_name {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .count_border {
+    h5 {
+      font-size: 70px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 0;
+      color: #444;
+    }
+  }
+}
